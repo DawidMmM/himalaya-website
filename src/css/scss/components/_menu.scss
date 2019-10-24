@@ -1,0 +1,66 @@
+.menu {
+	margin-top: 4rem;
+	padding: 0;
+	background-color: $light-black;
+	list-style: none;
+	text-align: center;
+	display: none;   
+
+	@media (min-width: 768px) {
+		background-color: inherit;
+		margin: 0 0 0 3.8125rem;
+		display:flex;
+		justify-content: center;
+	}	
+
+	&__item {
+		padding: 4px;
+
+		@media (min-width: 768px) {
+			padding: 0 10px; 
+		}
+	}
+
+	&__item:nth-child(2) {
+		@media (min-width: 768px) {
+			padding: 0 180px 0 0px; 
+		}
+	}
+
+	&__link {
+		padding: 0.75rem 1.25rem;
+		font-weight: 600;
+		font-size: $text-m;
+		color: $white;
+		display: block;
+
+		@media (min-width: 768px) {		
+			color: $black;			
+		}
+
+		&:hover {
+			background-color: $black;
+			color: $white;
+
+			@media (min-width: 768px) {			
+				background-color: inherit;	
+				color: $black;		
+				outline: 1px solid $black;
+			}
+		}
+	}
+
+	&_is-open {
+		display: block;
+
+		@media( min-width: 768px ) {
+			display: flex;
+		}
+	}	
+
+	&_collapsing {
+		height: 0;
+		overflow: hidden;
+		transition: height .5s;
+	}
+}

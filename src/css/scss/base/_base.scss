@@ -1,0 +1,15 @@
+body {
+    font-family: $font-primary;
+    font-size: $text-m;
+}
+
+main {
+	font-weight: 600;
+    text-align: center;
+}
+
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}

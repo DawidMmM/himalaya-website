@@ -1,0 +1,51 @@
+.no-js {
+	.home-picture {		
+	    opacity: 1;
+	}	
+
+	.title {
+		margin: 0 0 1.175rem;
+
+		@media( min-width: 768px ) {
+			margin-top: 3rem;		
+		}
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.navigation {
+		position: relative;
+	}
+
+	.menu {
+		margin-top: 7rem;
+		display: flex;
+    	flex-wrap: wrap;
+    	justify-content: center;
+
+    	@media( min-width: 768px ) {	
+			margin-top: 0;
+			flex-wrap: nowrap;				
+		}
+	}
+
+	.fotorama {
+		margin: 20px auto 0;
+		max-width: 760px;	    
+
+	    img {
+			display: block;
+		    max-width: 100%;
+		}
+	}
+
+	.hide {
+		opacity: 1;
+	}
+
+	.fotorama:not(.fotorama--unobtrusive)>*:not(:first-child) {
+	    display: block;
+	}
+}

@@ -1,0 +1,38 @@
+.container {
+	@include make-container();
+	@include make-container-max-widths();
+}
+
+.row {
+	@include make-row();
+
+	justify-content: center;
+}
+
+.column {
+	@include make-col-ready();	
+}
+
+.column_sm_6 {
+	@include media-breakpoint-up(sm) {
+	    @include make-col(6);
+	}
+}
+
+.column_lg_3 {
+	@include media-breakpoint-up(lg) {
+	    @include make-col(3);
+	}
+}
+
+.column_lg_5 {
+	@include media-breakpoint-up(lg) {
+	    @include make-col(5);
+	}
+}
+
+.column_lg_10 {
+	@include media-breakpoint-up(lg) {
+	    @include make-col(10);
+	}
+}
