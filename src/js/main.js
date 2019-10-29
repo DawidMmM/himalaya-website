@@ -20,27 +20,29 @@ class ToggleMenu {
 	}
 
     show() {
-        this.menu.classList.add( 'menu_is-open', 'menu_collapsing' );
-        this.menu.style.height = this.menu.scrollHeight + 'px';                
+		this.menu.classList.add( 'menu_is-open' );
+		this.menu.classList.add( 'menu_collapsing' );
+		this.menu.style.height = this.menu.scrollHeight + 'px';                
 
-        setTimeout( function() { 
-            this.menu.classList.remove( 'menu_collapsing' ); 
-            this.menu.style.height = '';                    
-        }.bind( this ), 500);  
-    }
-    
-    hide() {
-        this.menu.style.height = this.menu.getBoundingClientRect().height + 'px';
+		setTimeout( function() { 
+			this.menu.classList.remove( 'menu_collapsing' ); 
+			this.menu.style.height = '';                    
+		}.bind( this ), 400);  
+	}
+	
+	hide() {
+		this.menu.style.height = this.menu.getBoundingClientRect().height + 'px';
 
-        ToggleMenu.reflow( this.menu );
+		ToggleMenu.reflow( this.menu );
 
-        this.menu.classList.add( 'menu_collapsing' );
-        this.menu.style.height = '';
+		this.menu.classList.add( 'menu_collapsing' );
+		this.menu.style.height = '';
 
-        setTimeout( function() {       
-            this.menu.classList.remove( 'menu_is-open', 'menu_collapsing' );
-        }.bind( this ), 500 );       
-    }
+		setTimeout( function() {       
+			this.menu.classList.remove( 'menu_is-open' );
+			this.menu.classList.remove( 'menu_collapsing' );
+		}.bind( this ), 400 );       
+	}
 
     static reflow( el ) {
         return el.offsetHeight;
