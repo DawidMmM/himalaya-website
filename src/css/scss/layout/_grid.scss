@@ -5,34 +5,32 @@
 
 .row {
 	@include make-row();
-
-	justify-content: center;
 }
 
-.column {
-	@include make-col-ready();	
+.col-sm-5 {
+	@include media-breakpoint-up(sm) {
+	    @include make-col(5);
+	} 
 }
 
-.column_sm_6 {
+.col-sm-6 {
 	@include media-breakpoint-up(sm) {
 	    @include make-col(6);
 	}
 }
 
-.column_lg_3 {
+.col-lg-3 {
 	@include media-breakpoint-up(lg) {
 	    @include make-col(3);
 	}
 }
 
-.column_lg_5 {
-	@include media-breakpoint-up(lg) {
-	    @include make-col(5);
-	}
-}
-
-.column_lg_10 {
+.col-lg-10 {
 	@include media-breakpoint-up(lg) {
 	    @include make-col(10);
 	}
+}
+
+.col-sm-5, .col-sm-6, .col-lg-3, .col-lg-10 {
+	@include make-col-ready();
 }

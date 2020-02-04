@@ -3719,6 +3719,6 @@ document.addEventListener( 'DOMContentLoaded', ( e ) => {
 	const fotoramaContainer = document.querySelector( '.fotorama' );
 
 	setTimeout(() => {
-		fotoramaContainer.classList.remove( 'hide' );	
+		fotoramaContainer.classList.remove( 'fotorama_hide' );	
 	}, 1);
 } );

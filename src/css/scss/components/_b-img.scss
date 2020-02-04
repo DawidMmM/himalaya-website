@@ -1,12 +1,6 @@
 .b-img {
 	display: block;
-	background: url(../img/sprites.png) no-repeat;
-
-    &_logo {
-        margin: 0 auto;
-        width: 130px;
-        height: 129px;
-    }
+	background: url(../img/sprites.png) no-repeat;    
 
     &_weixin {
         background-position: -174px -129px;
@@ -16,8 +10,6 @@
 
     &_weixin_QR-code {
         background-position: -131px 0px;
-        width: 130px;
-        height: 129px;
     }
 
     &_weibo {
@@ -28,11 +20,10 @@
 
     &_weibo_QR-code {
         background-position: 0px -129px;
-        width: 129px;
-        height: 131px;
     }        
 
-    &_weixin, &_weibo {       
-        margin-right: 0.625rem;
+    &_logo, &_weixin_QR-code, &_weibo_QR-code {        
+        width: 130px;
+        height: 129px;
     }
 }
